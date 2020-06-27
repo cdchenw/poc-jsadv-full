@@ -55,6 +55,7 @@ const b1 = {
 console.log(b1 instanceof Object, b1 instanceof Array); //true false
 console.log(b1.b2 instanceof Array, b1.b2 instanceof Object, typeof b1.b2); //true true object
 console.log(b1.b3 instanceof Function, b1.b3 instanceof Object, typeof b1.b3 === 'function'); //true true true
+console.log(typeof b1.b2);// object, 面试常用
 console.log(typeof b1.b2[2] === 'function'); //true
 b1.b2[2](4); //4
 console.log(b1.b3()()); //b3, Vince God
@@ -70,3 +71,9 @@ console.log(b1.b3()()); //b3, Vince God
 
  var arr = [3, 'abc'];
  arr[1];
+
+
+ /**
+  * 附1:面试题
+  * 1. 数组不能用type of判断， 这是一个坑，type of 数组，返回的值是'object'
+  */
